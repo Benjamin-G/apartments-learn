@@ -31,4 +31,8 @@ bundle add devise
 rails g devise:install
 rails g devise User
 rails db:migrate
+
+//Jest & Enzyme
+yarn add jest
+yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 ```
