@@ -45,4 +45,9 @@ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 rails g migration add_user_info_to_users name:string phone:string hours:string
 rails db:migrate
 rails generate devise:views users
+
+
+//Apartments Resources
+rails generate resource Apartment address:string zipcode:integer city:string user_id:integer state:string
+rails db:migrate
 ```

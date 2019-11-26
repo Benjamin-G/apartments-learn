@@ -8,13 +8,14 @@ class App extends React.Component {
       const {
             logged_in,
             sign_in_route,
-            sign_out_route
+            sign_out_route,
+            current_user_id
         } = this.props
-
     return (
       <>
         <Header/>
         <Nav>
+            {console.log("-~-~-~>  :~:",current_user_id)}
              {logged_in && <NavItem>
                <NavLink href="#">You can see this since you are logged in</NavLink>
              </NavItem> }
