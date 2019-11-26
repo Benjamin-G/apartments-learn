@@ -32,7 +32,7 @@ rails g devise:install
 rails g devise User
 rails db:migrate
 
-//bootstrap
+//Bootstrap
 bundle add bootstrap
 mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
 yarn add reactstrap
@@ -41,8 +41,8 @@ yarn add reactstrap
 yarn add jest
 yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
 
-//Add colomns to users & signup
+//Add columns to users & signup
 rails g migration add_user_info_to_users name:string phone:string hours:string
 rails db:migrate
-
+rails generate devise:views users
 ```
