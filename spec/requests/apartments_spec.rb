@@ -14,4 +14,16 @@ RSpec.describe "Apartments", type: :request do
       expect(response).to have_http_status(200)
     end
   end
+  describe "POST /apartments" do
+        it "should create an animal sighting" do
+            sign_in user
+            byebug
+          headers = {
+              "ACCEPT" => "application/json"
+          }
+          body = {apartment: {address: "123 Easy Street", zipcode: "90210", user_id: user.id , state: "CA", user_id: user.id}}
+          post apartments_path, params: body, headers: headers
+          expect(response).to have_http_status(201)
+        end
+    end
 end

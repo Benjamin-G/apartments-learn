@@ -14,15 +14,8 @@ class App extends React.Component {
     return (
       <>
         <Header/>
-        <Nav>
-            {console.log("-~-~-~>  :~:",current_user_id)}
-             {logged_in && <NavItem>
-               <NavLink href="#">You can see this since you are logged in</NavLink>
-             </NavItem> }
-             {!logged_in && <NavItem>
-               <NavLink disabled href="#">You can see this since you are NOT logged in</NavLink>
-             </NavItem>}
-         </Nav>
+        <Router>
+        <Router/>
         {logged_in &&
           <div className="lead">
             <a color="primary" href={sign_out_route}>Sign Out</a>
