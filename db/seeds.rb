@@ -21,12 +21,12 @@ id1 = User.all[0].id
 id2 = User.all[4].id
 
 apartment_data = [
-    {address: "123 Easy Street", zipcode: "90210", user_id: id1, state: "CA"},
-    {address: "1243 Neptune", zipcode: "92002", user_id: id1, state: "CA"},
-    {address: "903 E st", zipcode: "92012", user_id: id1, state: "CA"},
-    {address: "66 Hard Street", zipcode: "15292", user_id: id2, state: "PA"},
-    {address: "198 Kleptune", zipcode: "15210", user_id: id2, state: "PA"},
-    {address: "903 F st", zipcode: "15302", user_id: id2, state: "PA"}
+    {address: "123 Easy Street", city: 'San Diego', zipcode: "90210", user_id: id1, state: "CA"},
+    {address: "1243 Neptune", city: 'San Diego', zipcode: "92002", user_id: id1, state: "CA"},
+    {address: "903 E st", city: 'San Diego', zipcode: "92012", user_id: id1, state: "CA"},
+    {address: "66 Hard Street", city: 'Pittsburgh', zipcode: "15292", user_id: id2, state: "PA"},
+    {address: "198 Kleptune", city: 'Pittsburgh', zipcode: "15210", user_id: id2, state: "PA"},
+    {address: "903 F st", city: 'Pittsburgh', zipcode: "15302", user_id: id2, state: "PA"}
 ]
 
 apartment_data.each do |data|

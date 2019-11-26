@@ -1,32 +1,32 @@
 import React from "react"
 import { Jumbotron, Nav, NavItem, NavLink } from 'reactstrap'
+import { BrowserRouter as  Router, Route, Link } from 'react-router-dom';
 
 import Header from '../reactcomponents/Header'
+import Listing from '../reactcomponents/Listing'
 
 class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            listings: []
+        }
+        this.getListings()
+    }
+    getListings = () => {
+        fetch("/apartments")
+            .then(req => req.json())
+            .then(list => this.setState({listings: list}))
+    }
   render () {
-      const {
-            logged_in,
-            sign_in_route,
-            sign_out_route,
-            current_user_id
-        } = this.props
+    const {listings} = this.state
     return (
-      <>
-        <Header/>
+    <>
         <Router>
-        <Router/>
-        {logged_in &&
-          <div className="lead">
-            <a color="primary" href={sign_out_route}>Sign Out</a>
-          </div>
-        }
-        {!logged_in &&
-          <div className="lead">
-            <a color="primary" href={sign_in_route}>Sign In</a>
-          </div>
-        }
-      </>
+            <Header{...this.props}/>
+            <Route path="/listings" render = {(props) => <Listing listings = {listings} />} />
+        </Router>
+    </>
     );
   }
 }

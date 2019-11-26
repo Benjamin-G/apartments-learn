@@ -50,4 +50,10 @@ rails generate devise:views users
 //Apartments Resources
 rails generate resource Apartment address:string zipcode:integer city:string user_id:integer state:string
 rails db:migrate
+
+//React Router
+yarn add react-router-dom
+
+//Testing log
+tail -f test.log ~> (pwd)/log
 ```
