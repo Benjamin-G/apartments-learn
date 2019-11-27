@@ -5,6 +5,8 @@ import { BrowserRouter as  Router, Route, Link } from 'react-router-dom';
 const Listing = (props) => {
     const {listings} = props
     return (
+    <div className="tRow">
+        <div className="tColOne">
         <table className="table">
           <thead className="thead-dark">
             <tr>
@@ -17,7 +19,7 @@ const Listing = (props) => {
           <tbody>
               {listings.map(({id, address, city, state, zipcode}, index) => (
                   <tr key={id}>
-                      <th scope="row">{address}</th>
+                      <Link to={`/apartments/${id}`}><th scope="row">{address}</th></Link>
                       <td>{city}</td>
                       <td>{state}</td>
                       <td>{zipcode}</td>
@@ -25,6 +27,10 @@ const Listing = (props) => {
               ))}
           </tbody>
         </table>
+        </div>
+        <div className="tColTwo">
+        </div>
+    </div>
     )
 }
 

@@ -14,3 +14,30 @@
  *= require_self
  */
 @import 'bootstrap';
+
+* {
+    font-family: "Courier New", Courier, monospace;
+}
+.title {
+  font-size: 63px;
+  color: white;
+  text-align: center;
+}
+.noMargin {
+    margin: 0;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 84%, rgba(0,212,255,1) 100%);
+}
+.tRow {
+    display: flex;
+    height: auto;
+}
+.tColOne {
+    flex: 35%;
+}
+
+.tColTwo {
+    background-image: url('background.jpg');
+    flex: 65%;
+    background-position: center;
+    background-size: cover;
+}

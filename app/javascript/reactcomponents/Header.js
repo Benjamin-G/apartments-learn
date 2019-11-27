@@ -13,8 +13,8 @@ const Header = (props) => {
     return (
 
     <>
-        <Jumbotron>
-            <h1>Apartments</h1>
+        <Jumbotron className="noMargin">
+            <h1 className="title">Apartmints</h1>
         </Jumbotron>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <a className="navbar-brand" href="/">

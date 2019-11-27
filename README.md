@@ -56,4 +56,7 @@ yarn add react-router-dom
 
 //Testing log
 tail -f test.log ~> (pwd)/log
+
+//Eslint
+yarn add -D eslint-config-airbnb eslint-config-prettier eslint-plugin-jsx-a11y eslint-plugin-prettier prettier
 ```
