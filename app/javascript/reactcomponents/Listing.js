@@ -19,7 +19,7 @@ const Listing = (props) => {
           <tbody>
               {listings.map(({id, address, city, state, zipcode}, index) => (
                   <tr key={id}>
-                      <Link to={`/apartments/${id}`}><th scope="row">{address}</th></Link>
+                      <th scope="row"><Link to={`/apartments/${id}`}>{address}</Link></th>
                       <td>{city}</td>
                       <td>{state}</td>
                       <td>{zipcode}</td>

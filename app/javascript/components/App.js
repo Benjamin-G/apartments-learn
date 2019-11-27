@@ -1,9 +1,11 @@
 import React from "react"
 import { Jumbotron, Nav, NavItem, NavLink } from 'reactstrap'
-import { BrowserRouter as  Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as  Router, Route, Link, Switch } from 'react-router-dom';
 
 import Header from '../reactcomponents/Header'
 import Listing from '../reactcomponents/Listing'
+import Apartment from '../reactcomponents/Apartment'
+
 
 class App extends React.Component {
     constructor(props) {
@@ -24,7 +26,10 @@ class App extends React.Component {
     <>
         <Router>
             <Header{...this.props}/>
-            <Route path="/listings" render = {(props) => <Listing listings = {listings} />} />
+            <Switch>
+            <Route path="/apartments/:id" component={(props) => <Apartment {...props} listings={listings}/>} />
+            <Route path="/apartments" render = {(props) => <Listing listings = {listings} />} />
+            </Switch>
         </Router>
     </>
     );
